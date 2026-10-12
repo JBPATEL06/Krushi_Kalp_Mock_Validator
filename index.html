@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mock Test JSON Validator</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="background-elements">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+    </div>
+
+    <main class="container">
+        <header>
+            <h1>Mock Test <span>Validator</span></h1>
+            <p>Ensure your JSON mock files are perfectly structured and match the exact validation logic of the Krushi Kalp mock test engine.</p>
+        </header>
+
+        <section class="upload-section" id="uploadSection">
+            <div class="drop-zone" id="dropZone">
+                <input type="file" id="fileInput" accept=".json" hidden>
+                <div class="drop-content">
+                    <svg class="upload-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                        <polyline points="17 8 12 3 7 8"></polyline>
+                        <line x1="12" y1="3" x2="12" y2="15"></line>
+                    </svg>
+                    <h3>Drag & Drop your JSON file here</h3>
+                    <p>or</p>
+                    <button class="btn-primary" id="browseBtn">Browse Files</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="results-section hidden" id="resultsSection">
+            <div class="results-header">
+                <h2 id="resultsTitle">Validation Results</h2>
+                <div style="display: flex; gap: 1rem;">
+                    <button class="btn-secondary" id="resetBtn">Validate Another File</button>
+                </div>
+            </div>
+            
+            <div class="summary-card" id="summaryCard">
+                <!-- Status will be injected here -->
+            </div>
+
+            <div class="errors-container" id="errorsContainer">
+                <!-- Errors will be injected here -->
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js?v=4"></script>
+</body>
+</html>
